@@ -263,27 +263,29 @@ button {
 }
 
 /* Registration Section */
+.registration .task {
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: gray;
+    transition: color 0.3s ease-in-out;
+}
+
 .registration h2 {
     margin-bottom: 50px;
+    font-size: 35px;
 }
 
-.registration li {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px; 
-    margin-bottom: 20px;
+.registration .checkbox {
+    margin-right: 20px;
+    cursor: pointer;
 }
 
-.registration li::before {
-    content: "☐"; 
-    display: inline-block;
-    flex-shrink: 0; 
+.registration .checkbox.checked {
+    font-size: 23px;
 }
 
-.registration li a {
-    word-break: break-word; 
-    display: inline-block; 
-    white-space: nowrap; 
+.registration .task.active {
+    color: white;
 }
 
 /* Media Queries */
