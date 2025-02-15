@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "Oozing";
-    src: url(oozing.ttf);
+    src: url(fonts/oozing.ttf);
 }
 
 @font-face {
     font-family: "Consola Mono";
-    src: url(ConsolaMono-Book.ttf);
+    src: url(fonts/ConsolaMono-Book.ttf);
 }
 
 :root {
@@ -260,6 +260,30 @@ button {
     font-size: 1.125rem;
     margin: 2rem;
     line-height: 1.6;
+}
+
+/* Registration Section */
+.registration h2 {
+    margin-bottom: 50px;
+}
+
+.registration li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px; 
+    margin-bottom: 20px;
+}
+
+.registration li::before {
+    content: "☐"; 
+    display: inline-block;
+    flex-shrink: 0; 
+}
+
+.registration li a {
+    word-break: break-word; 
+    display: inline-block; 
+    white-space: nowrap; 
 }
 
 /* Media Queries */
