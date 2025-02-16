@@ -197,7 +197,7 @@ button {
 }
 
 .btn--secondary {
-    border: 4px dashed #FFFFFF;
+    border: 4px dashed #FFFFFF1A;
     background-color: transparent;
     color: #FFFFFF;
 }
@@ -209,7 +209,7 @@ button {
 }
 
 .who-we-are__table {
-    border: 4px dashed #FFFFFF;
+    border: 4px dashed #FFFFFF1A;
     padding: 20px;
     text-align: left;
     width: 100%;
@@ -240,13 +240,13 @@ button {
 }
 
 .about__card {
-    border: 4px dashed #FFFFFF;
+    border: 4px dashed #FFFFFF1A;
     padding: 2.25rem;
     line-height: 1.75rem;
 }
 
 .about__theme {
-    border: 4px dashed #FFFFFF;
+    border: 4px dashed #FFFFFF1A;
     padding: 20px;
     text-align: center;
 }
