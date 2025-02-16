@@ -40,3 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.toggleCheckbox = toggleCheckbox;
 });
+
+
+/* accordion js */
+const accordionHeaders =  document.querySelectorAll(".accordionHeader");
+
+accordionHeaders.forEach(accordionHeader => {
+    accordionHeader.addEventListener("click", event => {
+        accordionHeader.classList.toggle("active");
+        const accordionBody = accordionHeader.nextElementSibling;
+        if(accordionHeader.classList.contains("active")) {
+            accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+        }
+        else {
+            accordionBody.style.maxHeight = 0;
+        }
+    });
+});
