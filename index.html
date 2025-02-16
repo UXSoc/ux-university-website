@@ -22,10 +22,10 @@
                 </a>
                 <div class="sidebar__link-wrapper">
                     <div class="sidebar__links">
-                        <a href="#">About</a>
-                        <a href="#">Curriculum</a>
-                        <a href="#">Registration</a>
-                        <a href="#">FAQ</a>
+                        <a href="#about">About</a>
+                        <a href="#curriculum">Curriculum</a>
+                        <a href="#registration">Registration</a>
+                        <a href="#faq">FAQ</a>
                         <a href="#">
                             Register
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
@@ -61,18 +61,18 @@
                             JOIN US
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </button>
-                        <button class="btn btn--secondary" type="button">READ MORE</button>
+                        <a href="#read-more"><button class="btn btn--secondary" type="button">READ MORE</button></a>
                     </div>
                 </div>
 
-                <div class="who-we-are">
+                <div class="who-we-are" id="read-more">
                     <div class="who-we-are__content">
                         <table class="who-we-are__table">
                             <tr>
-                                <th>Hi, we are User Experience Society!</th>
+                                <th class="who-we-are_text">Hi, we are User Experience Society!</th>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="who-we-are_text">
                                     UXSoc is a student-run organization based in Ateneo de Manila University
                                     that was started in 2015. We advocate and practice human-centered design
                                     in solving problems in the community. We aim to nurture designers who are
@@ -86,20 +86,20 @@
                 </div>
 
                 <!-- About Page -->
-                <section class="about">
+                <section id="about" class="about">
                     <div class="about__main">
                         <div class="about__header">
                             <h2>ABOUT UX UNI_</h2>
                             <div class="about__cards">
                                 <div class="about__card">
-                                    <h4 class="about__card-title">[LEARN, COMPETE, AND INNOVATE]</h4>
+                                    <h4 class="about__card-title">[LEARN, COMPETE, AND INNOVATE]</h4><br>
                                     <p>
                                         Started in 2017, UX University is a 6-week case study competition to evangelize design
                                         through a series of talks, workshops, and webinars.
                                     </p>
                                 </div>
                                 <div class="about__card">
-                                    <h4 class="about__card-title">[DESIGN SOLUTIONS FOR REAL WORLD PROBLEMS]</h4>
+                                    <h4 class="about__card-title">[DESIGN SOLUTIONS FOR REAL WORLD PROBLEMS]</h4><br>
                                     <p>
                                         The event walks participants through the process of conducting human-centered design
                                         while taking part in a design challenge to equip the participants with the right skills,
@@ -107,7 +107,7 @@
                                     </p>
                                 </div>
                                 <div class="about__card">
-                                    <h4 class="about__card-title">[GUIDED BY INDUSTRY EXPERTS]</h4>
+                                    <h4 class="about__card-title">[GUIDED BY INDUSTRY EXPERTS]</h4><br>
                                     <p>
                                         Several mentors will be present during the workshop to help and guide the participants
                                         with their work.
@@ -141,7 +141,7 @@
                 
                 <!-- Curriculum -->
                 <section id="curriculum" class="curriculum">
-                    <h2>CURRICULUM_</h2>
+                    <h2 class="curriclum-title">CURRICULUM_</h2><br>
               
                     <!-- Course Tabs -->
                     <div class="curriculum-course-tabs">
@@ -157,36 +157,36 @@
                         <div class="curriculum_tab-content">
                             <div id="cur-outcomes" data-tab-content class="active">
                                 <ul>
-                                    <li>Apply human-centered design principles for real world problems; translate user pain points into implementable design features</li>
-                                    <li>Leverage AI in practical design solutions</li>
-                                    <li>Gain efficiency in the UX/UI design process through the effective use of AI tools</li>
-                                    <li>Introduce participants to the benefits of AI in their design workflow</li>
-                                    <li>Evaluate ethical and inclusive AI design</li>
+                                    <li>Apply human-centered design principles for real world problems; translate user pain points into implementable design features</li><br>
+                                    <li>Leverage AI in practical design solutions</li><br>
+                                    <li>Gain efficiency in the UX/UI design process through the effective use of AI tools</li><br>
+                                    <li>Introduce participants to the benefits of AI in their design workflow</li><br>
+                                    <li>Evaluate ethical and inclusive AI design</li><br>
                                 </ul>
                             </div>
                         
                             <div id="cur-for-who" data-tab-content>
                                 <ul>
-                                    <li>All levels of UX/UI Designers looking to integrate AI into their Design Thinking Process</li>
-                                    <li>Developers wanting to learn more about human-centered designand AI's role in it</li>
-                                    <li>AI Beginners</li>
-                                    <li>UX Researchers that are looking for a tool to reengineer their process/es</li>
+                                    <li>All levels of UX/UI Designers looking to integrate AI into their Design Thinking Process</li><br>
+                                    <li>Developers wanting to learn more about human-centered designand AI's role in it</li><br>
+                                    <li>AI Beginners</li><br>
+                                    <li>UX Researchers that are looking for a tool to reengineer their process/es</li><br>
                                 </ul>
                             </div>
                         
                             <div id="cur-skills" data-tab-content>
                                 <ul>
-                                    <li>Basic Pompt Engineering</li>
-                                    <li>Prototyping</li>
-                                    <li>Fundamental UX/UI Knowledge</li>
-                                    <li>Problem Definition and Ideation with AI</li>
+                                    <li>Basic Pompt Engineering</li><br>
+                                    <li>Prototyping</li><br>
+                                    <li>Fundamental UX/UI Knowledge</li><br>
+                                    <li>Problem Definition and Ideation with AI</li><br>
                                 </ul>
                             </div>
                               
                             <div id="cur-tools" data-tab-content>
                                 <ul>
-                                    <li>Figma</li>
-                                    <li>AI Tools such as ChatGPT, Claude, Gemini, Deepseek, Figma AI, etc.</li>
+                                    <li>Figma</li><br>
+                                    <li>AI Tools such as ChatGPT, Claude, Gemini, Deepseek, Figma AI, etc.</li><br>
                                 </ul>
                             </div>
                         </div>
@@ -546,7 +546,7 @@
 
 
                 <!--Registration-->
-                <section class="registration">
+                <section id="registration" class="registration">
                     <h2>REGISTRATION_</h2>
                     <div class="task" data-index="1">
                         <span class="checkbox" onclick="toggleCheckbox(this)">☐</span>
@@ -586,7 +586,7 @@
 
         <!-- Accordion for FAQs-->
 
-        <h1>FAQs_</h1>
+        <h1 id="faq" class="accordionTitle">FAQs_</h1>
         <div class="accordion">
             <div class="accordionItem">
                 <div class="accordionHeader">
