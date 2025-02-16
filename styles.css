@@ -582,6 +582,7 @@ hr {
     background: rgb(226, 224, 224);
     font-size: 0;
     border: 0;
+    width: calc(100% - var(--sidebar-width));
 }
 
 .accordion {
@@ -598,19 +599,18 @@ hr {
     margin-left: var(--sidebar-width); 
 }
 
-.accordionItem{   
-    color:white;
+.accordionItem {   
+    color: white;
     margin: 1rem 0;
     border-radius: 0.5rem;
 }
 
-.accordionHeader{
+.accordionHeader {
     padding: 0.5rem 3rem 0.5rem 2.5rem;
     min-height: 3.5rem;
     line-height: 1.25rem;
     font-weight: bold;
     display: flex;
-    align-items: center;
     align-items: center;
     position: relative;
     cursor: pointer;
@@ -621,11 +621,11 @@ hr {
     transform: rotate(180deg);
     font-size: 1rem;
     position: absolute;
-    left: 1rem ;
+    left: 1rem;
     transition: transform 0.3s ease-in-out;
 }
 
-.accordionHeader.active::after{
+.accordionHeader.active::after {
     transform: rotate(360deg);
 }
 
@@ -638,4 +638,41 @@ hr {
 .accordionContent {
     padding: 1rem;
     line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    hr {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .accordion {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .accordionTitle {
+        margin-left: 0;
+        padding: 0 15px;
+        font-size: 20px;
+    }
+    
+    .accordionHeader {
+        padding: 0.5rem 2rem 0.5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .accordion {
+        padding: 10px;
+    }
+    
+    .accordionTitle {
+        padding: 0 10px;
+        font-size: 18px;
+    }
+    
+    .accordionHeader {
+        padding: 0.5rem 1.75rem 0.5rem 1.75rem;
+    }
 }
