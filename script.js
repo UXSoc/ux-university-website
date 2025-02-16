@@ -9,6 +9,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Curriculum Tabs
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabTarget)
+        tabContents.forEach(tabContent => {
+        tabContent.classList.remove('active')
+        })
+        tabs.forEach(tab => {
+        tab.classList.remove('active')
+        })
+        tab.classList.add('active')
+        target.classList.add('active')
+    })
+})
+
+// Curriculum Calendar
+let weekIndex = 1;
+showWeek(weekIndex);
+
+// Next/previous controls
+function plusWeek(n) {
+  showWeek(weekIndex += n);
+}
+
+// Week controls
+function currentWeek(n) {
+  showWeek(weekIndex = n);
+}
+
+function showWeek(n) {
+  let i;
+  let weeks = document.getElementsByClassName("curriculum-calendar");
+
+  // Hides the weeks that aren't active
+  for (i = 0; i < weeks.length; i++) {
+    weeks[i].style.display = "none";
+  }
+  weeks[weekIndex-1].style.display = "grid";
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const registrationTasks = document.querySelectorAll(".registration .task");
 

@@ -262,6 +262,147 @@ button {
     line-height: 1.6;
 }
 
+/* CURRICULUM */
+.curriculum {
+    display: block;
+    max-width: 1200px;
+    margin: 1rem auto;
+}
+  
+/* Course Tabs */
+  
+[data-tab-content] { display: none; }
+  
+.active[data-tab-content] { display: block; }
+  
+.curriculum_tab {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #FFFFFF1A;
+    color: #FFFFFF99;
+    font-weight: lighter;
+}
+  
+.curriculum_tab.active {
+    background-color: #FFFFFF1A;
+    color: #FFFFFF;
+}
+  
+.curriculum_tab-content {
+    padding: 40px;
+    min-height: 270px;
+    text-align: justify;
+    border: 4px dashed #FFFFFF1A;
+    border-width: thick;
+}
+  
+/** Prize List **/
+.curriculum-prizes {
+    margin-bottom: 2rem;
+}
+  
+.curriculum__prizes-description {
+    width: 28rem;
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+  
+.curriculum__prizes-top3 {
+    display: flex;
+    justify-content: center;
+}
+  
+.curriculum__prize-box {
+    border: 4px dashed #FFFFFF1A;
+    border-width: thick;
+    margin: 3px;
+    width: 210px;
+    height: 90px;
+    align-content: center;
+    text-align: center;
+}
+  
+  
+/** Calendar **/
+.curriculum-calendar {
+    display: grid;
+    max-width: 56em;
+    margin: 6rem auto;
+    
+    grid-template-columns: 4em 4em 8em 8em 8em 8em 8em 4em 4em;
+    grid-template-rows: 2.5em 1.5em 1.5em 8em;
+}
+  
+#month {
+    grid-column: 2 / 9;
+    grid-row: 1 / 2;
+}
+  
+#sunday { grid-column: 1 / 3; }
+  
+#saturday { grid-column: 8 / 10; }
+  
+/* Adjusted so the text doesn't clip through the table */
+#calendar_presentation { font-size: 16px; }
+  
+.cur_calendar-cell {
+    border: 1px solid #FFFFFF1A;
+    align-content: center;
+    text-align: center;
+    font-weight: lighter;
+}
+  
+.cur_calendar-title { background-color: #FFFFFF1A; }
+  
+.cur_calendar-next, .cur_calendar-previous {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+  
+.cur_null-calendar {
+    color: #FFFFFF1A;
+    cursor: default;
+  }
+  
+  .cur_calendar_workshop {
+    background-color: #00FF2F;
+    color: #000000;
+}
+  
+.cur_calendar_date-marks { background-color: #213CA6; }
+  
+.cur_calendar_webinar {
+    background-color: #F6FF00;
+    color: #000000;
+}
+  
+/** Events Table **/
+.curriculum-events-table {
+    margin: 6rem auto;
+}
+  
+.curriculum_table {
+    border-collapse: collapse;
+}
+  
+.cur_table-header {
+    padding-bottom: 24px;
+    text-align: left;
+}
+  
+.cur_table-rows {
+    border-bottom: 1px solid #FFFFFF66;
+}
+  
+.cur_table-cell {
+    padding: 24px 20px 24px 0;
+    font-size: 17px;
+}
+
+
 /* Registration Section */
 .registration .task {
     font-size: 17px;
@@ -343,6 +484,87 @@ button {
     .btn {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+/* Course Tabs */
+@media screen and (max-width: 768px) {
+    .curriculum .curriculum-course-tabs {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .curriculum .curriculum-course-tabs table {
+        min-width: 600px;
+        width: 100%;
+    }
+    
+    .curriculum .curriculum_tab-content {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+/* Prize List */
+@media screen and (max-width: 768px) {
+    .curriculum .curriculum__prizes-description {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .curriculum .curriculum__prizes-top3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .curriculum .curriculum__prize-box {
+        width: 100%;
+        max-width: 300px;
+        margin: 0;
+    }
+}
+
+/* Calendar */
+@media screen and (max-width: 768px) {
+    .curriculum .curriculum-calendar {
+        width: 100%;
+        overflow-x: auto;
+        display: grid;
+        grid-template-columns: repeat(9, minmax(80px, 1fr));
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Events Table */
+@media screen and (max-width: 768px) {
+    .curriculum .curriculum-events-table {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .curriculum .curriculum_table {
+        min-width: 800px;
+    }
+    
+    .curriculum .cur_table-cell {
+        white-space: normal;
+        padding: 24px 10px 24px 0;
+    }
+}
+
+/* Curriculum Base */
+@media screen and (max-width: 768px) {
+    .curriculum {
+        width: 100%;
+        padding: 0 1rem;
+        overflow-x: hidden;
+    }
+    
+    .curriculum > * {
+        max-width: 100%;
     }
 }
 
