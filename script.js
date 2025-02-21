@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => { 
     const navToggle = document.querySelector('.nav-toggle');
     const sidebar = document.querySelector('.sidebar');
-    const body = document.body;
-    
+
     navToggle.addEventListener('click', () => {
         sidebar.classList.toggle('nav-open');
         navToggle.classList.toggle('nav-open');
     });
 });
-
 
 // Curriculum Tabs
 const tabs = document.querySelectorAll('[data-tab-target]')
@@ -17,12 +15,14 @@ const tabContents = document.querySelectorAll('[data-tab-content]')
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.tabTarget)
+
         tabContents.forEach(tabContent => {
-        tabContent.classList.remove('active')
+            tabContent.classList.remove('active')
         })
         tabs.forEach(tab => {
-        tab.classList.remove('active')
+            tab.classList.remove('active')
         })
+
         tab.classList.add('active')
         target.classList.add('active')
     })
@@ -32,17 +32,14 @@ tabs.forEach(tab => {
 let weekIndex = 1;
 showWeek(weekIndex);
 
-// Next/previous controls
+// Next and previous controls
 function plusWeek(n) {
-  showWeek(weekIndex += n);
+    weekIndex += n
+    showWeek();
 }
 
-// Week controls
-function currentWeek(n) {
-  showWeek(weekIndex = n);
-}
-
-function showWeek(n) {
+// Week Controls
+function showWeek() {
   let i;
   let weeks = document.getElementsByClassName("curriculum-calendar");
 
@@ -53,14 +50,14 @@ function showWeek(n) {
   weeks[weekIndex-1].style.display = "grid";
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
     const registrationTasks = document.querySelectorAll(".registration .task");
 
-    // Scroll-based highlighting
+    // Scroll-based Highlighting
     function checkRegistrationVisibility() {
         registrationTasks.forEach(task => {
             const rect = task.getBoundingClientRect();
+
             if (rect.top < window.innerHeight * 0.5 && rect.bottom > 0) {
                 task.classList.add("active");
             } else {
@@ -70,15 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function toggleCheckbox(element) {
-    if (element.textContent === "☐") {
-        element.textContent = "■";
-        element.classList.add("checked");
-    } else {
-        element.textContent = "☐";
-        element.classList.remove("checked");
+        if (element.textContent === "☐") {
+            element.textContent = "■";
+            element.classList.add("checked");
+        } else {
+            element.textContent = "☐";
+            element.classList.remove("checked");
+        }
     }
-}
-
 
     window.addEventListener("scroll", checkRegistrationVisibility);
     checkRegistrationVisibility();
@@ -87,14 +83,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* accordion js */
+/* Accordion JS */
 const accordionHeaders =  document.querySelectorAll(".accordionHeader");
 
 accordionHeaders.forEach(accordionHeader => {
     accordionHeader.addEventListener("click", event => {
         accordionHeader.classList.toggle("active");
         const accordionBody = accordionHeader.nextElementSibling;
-        if(accordionHeader.classList.contains("active")) {
+
+        if (accordionHeader.classList.contains("active")) {
             accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
         }
         else {
